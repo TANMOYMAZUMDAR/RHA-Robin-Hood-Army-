@@ -53,14 +53,15 @@
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/fab_google"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/viewPager"
-            android:id="@+id/fab_google"
             android:elevation="35dp"
-            android:src="@drawable/google"
-            android:backgroundTint="@color/colorWhite"/>
+            android:src="@drawable/google"/>
+
+
 
 
 
