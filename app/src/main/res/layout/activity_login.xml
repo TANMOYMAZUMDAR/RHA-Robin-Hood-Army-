@@ -7,23 +7,27 @@
     tools:context=".LoginActivity">
 
     <ImageView
+        android:id="@+id/imageViewBackgrd"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-
-        android:src="@drawable/rhabackgroung"
-        app:layout_constraintHeight_percent="0.27"
+        android:contentDescription="@string/todo"
         android:scaleType="centerCrop"
-        app:layout_constraintVertical_bias="0"
+        android:src="@drawable/rhabackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.27"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-         />
+        app:layout_constraintVertical_bias="0.0" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintHeight_percent=".78"
         app:layout_constraintVertical_bias="1"
+        android:background="@drawable/vie_bg"
+        android:id="@+id/constraintLayout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,23 +55,57 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_google"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/fab_google"
+            android:backgroundTint="@color/colorWhite"
+            android:elevation="35dp"
+            android:src="@drawable/google"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.661"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/viewPager"
+            app:layout_constraintVertical_bias="0.462" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/colorWhite"
             android:elevation="35dp"
-            android:src="@drawable/google"/>
-
-
-
-
-
+            android:src="@drawable/facebook"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/fab_google"
+            app:layout_constraintHorizontal_bias="0.741"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewPager"
+            app:layout_constraintVertical_bias="0.477" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <ImageView
+        android:layout_width="99dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageRhalogo"
+        android:src="@drawable/rha"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBackgrd"
+        app:layout_constraintVertical_bias="0.197" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to RHA Mysore"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintVertical_bias=".2"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageRhalogo"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
